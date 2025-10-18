@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Charset & Viewport -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <!-- Title & Description -->
+        <title>TenRusl Droid IconLab (TRDIL) — Android Adaptive Icons Generator</title>
+        <meta
+            name="description"
+            content="TenRusl Droid IconLab (TRDIL) — Android adaptive icons generator. Fast, offline, consistent. Export ZIP with mipmap-ldpi..xxxhdpi and anydpi-v26."
+        />
+
+        <!-- Indexing -->
+        <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+        <meta name="googlebot" content="index,follow" />
+
+        <!-- Brand & PWA -->
+        <meta name="application-name" content="TenRusl Droid IconLab" />
+        <meta name="theme-color" content="#8b5cf6" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#111827" media="(prefers-color-scheme: dark)" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="color-scheme" content="dark light" />
+        <meta name="author" content="Andika Rusli - TenRusl" />
+        <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <meta name="trhc-country" content="ID" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-TileColor" content="#8b5cf6" />
+
+        <!-- Canonical & Hreflang (root = EN) -->
+        <link rel="canonical" href="https://tenrusl-droid-iconlab.pages.dev/" />
+        <link rel="alternate" href="https://tenrusl-droid-iconlab.pages.dev/" hreflang="x-default" />
+        <link rel="alternate" href="https://tenrusl-droid-iconlab.pages.dev/" hreflang="en" />
+        <link rel="alternate" href="https://tenrusl-droid-iconlab.pages.dev/id/" hreflang="id-ID" />
+
+        <!-- CSP (ketat, tanpa inline JS/CSS) -->
+        <meta
+            http-equiv="Content-Security-Policy"
+            content="default-src 'self'; img-src 'self' blob: data:; style-src 'self'; font-src 'self' data:; script-src 'self'; connect-src 'self'; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; frame-ancestors 'self'; form-action 'self'; manifest-src 'self'"
+        />
+
+        <!-- Icons & Manifest -->
+        <link rel="icon" href="/assets/images/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png" />
+        <link rel="mask-icon" href="/assets/images/icon.svg" color="#8b5cf6" />
+        <link rel="icon" href="/assets/images/icon.svg" sizes="192x192" />
+        <link rel="icon" href="/assets/images/icon.svg" sizes="512x512" />
+        <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+
+        <!-- Performance: preload critical CSS (tanpa inline handler agar cocok CSP) -->
+        <link rel="preload" href="/assets/css/theme.css" as="style" fetchpriority="high" />
+        <link rel="stylesheet" href="/assets/css/theme.css" />
+        <!-- Styles (order matters) -->
+        <link rel="stylesheet" href="/assets/css/chrome.css" />
+        <link rel="stylesheet" href="/assets/css/header.css" />
+        <link rel="stylesheet" href="/assets/css/footer.css" />
+        <link rel="stylesheet" href="/assets/css/language.css" />
+        <link rel="stylesheet" href="/assets/css/app.css" />
+
+        <!-- Plugins (local) -->
+        <link rel="stylesheet" href="/assets/plugin/fontawesome/css/all.min.css" />
+
+        <!-- Open Graph -->
+        <meta property="og:site_name" content="TenRusl Droid IconLab" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="TenRusl Droid IconLab (TRDIL)" />
+        <meta property="og:description" content="Android adaptive icons generator — fast, offline, consistent." />
+        <meta property="og:url" content="https://tenrusl-droid-iconlab.pages.dev/" />
+        <!-- Gunakan raster image 1200x630 (PNG/JPG), bukan SVG -->
+        <meta property="og:image" content="/assets/images/icon.svg" />
+        <meta property="og:image:secure_url" content="/assets/images/icon.svg" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="TenRusl Droid IconLab preview" />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:locale:alternate" content="id_ID" />
+        <meta property="og:updated_time" content="2025-10-19T00:00:00+07:00" />
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="TenRusl Droid IconLab (TRDIL)" />
+        <meta name="twitter:description" content="Android adaptive icons generator — fast, offline, consistent." />
+        <meta name="twitter:image" content="/assets/images/icon.svg" />
+
+        <!-- Structured Data -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "WebApplication",
+                "name": "TenRusl Droid IconLab",
+                "alternateName": "TRDIL",
+                "url": "https://tenrusl-droid-iconlab.pages.dev/",
+                "applicationCategory": "DesignApplication",
+                "operatingSystem": "Web",
+                "inLanguage": "en",
+                "description": "Android adaptive icons generator. Fast, offline, consistent. Export ZIP with mipmap-ldpi..xxxhdpi and anydpi-v26.",
+                "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+                "creator": {
+                    "@type": "Organization",
+                    "name": "TenRusl",
+                    "url": "https://tenrusl-droid-iconlab.pages.dev/",
+                    "logo": "/assets/images/icon.svg"
+                },
+                "featureList": [
+                    "Adaptive icons foreground/background layers",
+                    "Safe zone mask & preview",
+                    "Export ZIP: mipmap-ldpi..xxxhdpi + anydpi-v26",
+                    "SVG/PNG input, background fill, padding",
+                    "Offline-first PWA (no upload), privacy-first",
+                    "Keyboard-first workflow & presets"
+                ],
+                "softwareVersion": "1.0.0",
+                "datePublished": "2025-10-01",
+                "dateModified": "2025-10-19",
+                "screenshot": "/assets/images/icon.svg"
+            }
+        </script>
+
+        <!-- Organization -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "TenRusl",
+                "url": "https://tenrusl-droid-iconlab.pages.dev/",
+                "logo": "/assets/images/icon.svg",
+                "sameAs": ["https://github.com/kakrusliandika", "https://x.com/kakrusliandika"]
+            }
+        </script>
+
+        <!-- Discovery hints -->
+        <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+    </head>
+
+    <body>
+        <main class="trdil-scope grid">
+            <section class="panel">
+                <h1 class="app-title" data-i18n="app.name">TenRusl Droid IconLab</h1>
+                <p class="sub" data-i18n="app.tagline">Android adaptive icons generator — fast, offline, consistent.</p>
+
+                <h2 data-i18n="ui.step1">1) Upload Logo</h2>
+                <div class="drop" id="drop" aria-live="polite">
+                    <input id="file" type="file" accept="image/png,image/svg+xml" />
+                    <p data-i18n="ui.dropHint">Drag & drop PNG/SVG or click to choose.</p>
+                    <p class="muted" id="fileMeta" data-i18n="ui.noFile">No file selected.</p>
+                </div>
+
+                <h2 data-i18n="ui.step2">2) Settings</h2>
+
+                <div class="form">
+                    <!-- Padding -->
+                    <details open>
+                        <summary data-i18n="ui.padding">Padding</summary>
+                        <label class="row range">
+                            <span data-i18n="ui.padding">Padding</span>
+                            <input id="pad" type="range" min="0" max="30" step="1" value="12" aria-controls="padVal" />
+                            <span class="val" id="padVal">12%</span>
+                        </label>
+                    </details>
+
+                    <!-- Bentuk/Shape -->
+                    <details>
+                        <summary data-i18n="ui.shape">Shape</summary>
+                        <label class="row">
+                            <span data-i18n="ui.shape">Shape</span>
+                            <select id="shape" aria-label="Icon shape">
+                                <option value="squircle" data-i18n="shape.squircle">Squircle</option>
+                                <option value="circle" data-i18n="shape.circle">Circle</option>
+                                <option value="rounded" data-i18n="shape.rounded">Rounded</option>
+                            </select>
+                        </label>
+                    </details>
+
+                    <!-- Latar/Background -->
+                    <details>
+                        <summary data-i18n="ui.background">Background</summary>
+
+                        <label class="row">
+                            <span data-i18n="bg.mode">Mode</span>
+                            <select id="bgMode">
+                                <option value="solid" data-i18n="bg.solid">Solid</option>
+                                <option value="gradient" data-i18n="bg.gradient">Gradient</option>
+                            </select>
+                        </label>
+
+                        <!-- Warna A & B sejajar -->
+                        <label class="row colors">
+                            <span>Colors</span>
+                            <div class="color-pair">
+                                <div class="color-field">
+                                    <span class="mini" data-i18n="bg.colorA">Color A</span>
+                                    <input id="bgA" type="color" value="#6d28d9" />
+                                </div>
+                                <div class="color-field only-gradient">
+                                    <span class="mini" data-i18n="bg.colorB">Color B</span>
+                                    <input id="bgB" type="color" value="#ec4899" />
+                                </div>
+                            </div>
+                        </label>
+                    </details>
+
+                    <!-- Watermark -->
+                    <details>
+                        <summary data-i18n="ui.watermark">Watermark (optional)</summary>
+
+                        <label class="row">
+                            <span data-i18n="wm.text">Text</span>
+                            <input id="wmText" type="text" placeholder="© Brand" />
+                        </label>
+
+                        <!-- Font family -->
+                        <label class="row">
+                            <span>Font</span>
+                            <select id="wmFont" aria-label="Watermark font">
+                                <option value="system-sans">System Sans (Default)</option>
+                                <option value="system-serif">System Serif</option>
+                                <option value="system-mono">System Monospace</option>
+                                <option value="sf-pro">SF Pro / Apple System</option>
+                                <option value="segoe-ui">Segoe UI</option>
+                                <option value="roboto">Roboto / Noto Sans</option>
+                                <option value="inter">Inter (fallback system)</option>
+                                <option value="poppins">Poppins (fallback system)</option>
+                                <option value="helvetica-neue">Helvetica Neue</option>
+                                <option value="arial">Arial</option>
+                                <option value="ubuntu">Ubuntu</option>
+                                <option value="cantarell">Cantarell</option>
+                                <option value="georgia">Georgia</option>
+                                <option value="times">Times New Roman</option>
+                                <option value="courier">Courier New</option>
+                                <option value="consolas">Consolas</option>
+                                <option value="menlo">Menlo</option>
+                                <option value="monaco">Monaco</option>
+                                <option value="fira-code">Fira Code</option>
+                                <option value="jetbrains-mono">JetBrains Mono</option>
+                            </select>
+                        </label>
+
+                        <!-- Font size (px @ 432 reference) -->
+                        <label class="row range">
+                            <span>Font Size</span>
+                            <input
+                                id="wmFontSize"
+                                type="range"
+                                min="8"
+                                max="96"
+                                step="1"
+                                value="48"
+                                aria-controls="wmFontSizeVal"
+                            />
+                            <span class="val" id="wmFontSizeVal">48</span>
+                        </label>
+
+                        <!-- Opacity -->
+                        <label class="row range">
+                            <span data-i18n="wm.opacity">Opacity</span>
+                            <input
+                                id="wmOpacity"
+                                type="range"
+                                min="0"
+                                max="100"
+                                value="80"
+                                aria-controls="wmOpacityVal"
+                            />
+                            <span class="val" id="wmOpacityVal">80%</span>
+                        </label>
+
+                        <!-- Posisi: manual (pad + number X/Y, satuan px @ 432) -->
+                        <label class="row">
+                            <span id="wmPosLabel" data-i18n="wm.position">Position</span>
+                            <div class="pos-xy" role="group" aria-labelledby="wmPosLabel">
+                                <div class="pos-xy-ctrl">
+                                    <canvas
+                                        id="posPad"
+                                        width="200"
+                                        height="200"
+                                        aria-label="Watermark position pad"
+                                    ></canvas>
+                                </div>
+                                <div class="pos-xy-sliders">
+                                    <label class="row range slim">
+                                        <span>X</span>
+                                        <!-- <input
+                                            id="wmPosX"
+                                            type="number"
+                                            min="0"
+                                            max="432"
+                                            step="1"
+                                            value="368"
+                                            aria-controls="wmCoordX"
+                                        /> -->
+                                        <span class="val" id="wmCoordX">368</span>
+                                    </label>
+                                    <label class="row range slim">
+                                        <span>Y</span>
+                                        <!-- <input
+                                            id="wmPosY"
+                                            type="number"
+                                            min="0"
+                                            max="432"
+                                            step="1"
+                                            value="368"
+                                            aria-controls="wmCoordY"
+                                        /> -->
+                                        <span class="val" id="wmCoordY">368</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </label>
+                    </details>
+
+                    <!-- Options -->
+                    <label class="row check">
+                        <input id="withRound" type="checkbox" />
+                        <span data-i18n="opt.round">Include legacy round icon</span>
+                    </label>
+                    <label class="row check">
+                        <input id="withAnyDpi" type="checkbox" checked />
+                        <span data-i18n="opt.anydpi">Include mipmap-anydpi-v26 (adaptive)</span>
+                    </label>
+                    <label class="row check">
+                        <input id="withPreview" type="checkbox" checked />
+                        <span data-i18n="opt.preview">Include preview sheet (PNG)</span>
+                    </label>
+                </div>
+
+                <button id="btnGen" class="primary" data-i18n="cta.generate">Generate ZIP</button>
+                <p class="muted" id="note" data-i18n="note.privacy">All local. No network calls.</p>
+            </section>
+
+            <section class="panel">
+                <h2 data-i18n="ui.step3">3) Preview</h2>
+                <div class="preview-grid" id="previews" data-empty="No preview yet — upload a logo ↑"></div>
+                <canvas id="scratch" width="432" height="432" hidden></canvas>
+            </section>
+        </main>
+
+        <!-- Vendor ZIP (global) -->
+        <script src="assets/vendor/jszip.min.js"></script>
+        <script src="assets/vendor/FileSaver.min.js"></script>
+
+        <!-- JS referensi -->
+        <script src="assets/js/footer.js"></script>
+        <script src="assets/js/header.js"></script>
+        <script src="assets/js/theme.js"></script>
+
+        <!-- ESM TRDIL -->
+        <script type="module" src="assets/js/language.js"></script>
+        <script type="module" src="assets/js/app.js"></script>
+    </body>
+</html>

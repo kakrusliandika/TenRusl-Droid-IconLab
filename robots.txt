@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tenrusl-droid-iconlab.pages.dev/sitemap.xml

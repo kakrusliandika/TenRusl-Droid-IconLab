@@ -1,0 +1,492 @@
+/* C:\laragon\www\TenRusl-Droid-IconLab\assets\css\app.css */
+
+.trdil-scope {
+    color-scheme: dark;
+    --_panel: var(--surface-2, var(--panel, #111827));
+    --_panel-2: color-mix(in oklab, var(--_panel) 92%, #000);
+    --_text: var(--text, var(--fg, #e5e7eb));
+    --_muted: var(--muted, #9ca3af);
+    --_accent: var(--accent, var(--primary, #6d28d9));
+    --_accent2: var(--accent-2, var(--secondary, #ec4899));
+    --_border: var(--hairline, rgba(255, 255, 255, 0.12));
+    --_radius: 14px;
+    --_shadow: 0 14px 34px rgba(0, 0, 0, 0.3);
+    --_ring: color-mix(in oklab, var(--_accent) 45%, transparent);
+    --_fs-base: clamp(13px, 0.9vw + 10px, 15px);
+    --_sp-1: 0.5rem;
+    --_sp-2: 0.75rem;
+    --_sp-3: 1rem;
+    --_sp-4: 1.25rem;
+    --_sp-5: 1.75rem;
+    --pvL: 320px;
+    font-size: var(--_fs-base);
+    color: var(--_text);
+}
+
+/* Grid: panel kanan lebih lebar */
+.trdil-scope.grid {
+    width: min(1440px, 96vw);
+    margin: clamp(18px, 2.2vw, 36px) auto;
+    display: grid;
+    gap: clamp(16px, 2.2vw, 26px);
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+}
+@media (max-width: 900px) {
+    .trdil-scope.grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Panel */
+.trdil-scope .panel {
+    background: linear-gradient(180deg, color-mix(in oklab, var(--_panel) 96%, transparent) 0%, var(--_panel-2) 100%);
+    border: 1px solid var(--_border);
+    border-radius: var(--_radius);
+    padding: var(--_sp-5) var(--_sp-4);
+    box-shadow: var(--_shadow);
+    transition: transform 0.15s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.25s ease;
+}
+@supports (backdrop-filter: blur(8px)) {
+    .trdil-scope .panel {
+        backdrop-filter: blur(8px);
+        background: color-mix(in oklab, var(--_panel) 88%, transparent);
+    }
+}
+.trdil-scope .panel:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 18px 46px rgba(0, 0, 0, 0.34);
+    border-color: color-mix(in oklab, var(--_accent) 22%, var(--_border));
+}
+
+/* Headings */
+.trdil-scope .app-title {
+    margin: 0 0 6px;
+    font-size: clamp(20px, 1.2vw + 16px, 26px);
+    font-weight: 800;
+    letter-spacing: 0.2px;
+}
+.trdil-scope .sub {
+    margin: 0 0 18px;
+    color: var(--_muted);
+    font-size: 0.95em;
+}
+.trdil-scope .muted {
+    color: var(--_muted);
+}
+.trdil-scope h2 {
+    margin: 22px 0 14px;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    display: flex;
+    align-items: center;
+    gap: 0.6ch;
+}
+.trdil-scope h2::after {
+    content: "";
+    flex: 1 1 auto;
+    height: 1px;
+    background: linear-gradient(90deg, var(--_border), transparent);
+}
+
+/* Form */
+.trdil-scope .form {
+    display: grid;
+    gap: 16px;
+}
+.trdil-scope details > summary {
+    cursor: pointer;
+    color: var(--_text);
+    font-weight: 800;
+    margin: 0 0 10px;
+    letter-spacing: 0.2px;
+}
+.trdil-scope details {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+    border: 1px solid var(--_border);
+    border-radius: 12px;
+    padding: 14px 14px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+.trdil-scope details[open] {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--_accent) 12%, transparent);
+}
+.trdil-scope details .row + .row {
+    margin-top: 12px;
+}
+.trdil-scope .only-gradient {
+    display: none;
+}
+
+.trdil-scope .row {
+    --label-w: 180px;
+    display: grid;
+    grid-template-columns: var(--label-w) 1fr;
+    gap: 14px;
+    align-items: center;
+}
+.trdil-scope .row.check {
+    grid-template-columns: 24px 1fr;
+}
+@media (max-width: 620px) {
+    .trdil-scope .row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+}
+
+/* Range row */
+.trdil-scope .row.range {
+    grid-template-columns: 160px 1fr auto;
+}
+.trdil-scope .row.range.slim {
+    grid-template-columns: 30px 1fr auto;
+} /* untuk X/Y kecil */
+@media (max-width: 620px) {
+    .trdil-scope .row.range {
+        grid-template-columns: 1fr auto;
+    }
+    .trdil-scope .row.range > span:first-child {
+        grid-column: 1 / -1;
+    }
+}
+
+/* Warna A & B sejajar */
+.trdil-scope .row.colors .color-pair {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(140px, 1fr));
+    gap: 12px;
+    align-items: center;
+}
+.trdil-scope .row.colors .color-field {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+}
+.trdil-scope .row.colors .color-field .mini {
+    font-size: 12px;
+    color: var(--_muted);
+}
+
+/* Badge nilai */
+.trdil-scope .val {
+    justify-self: end;
+    min-width: 3.5ch;
+    text-align: right;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    color: #fff;
+    background: color-mix(in oklab, var(--_accent) 35%, transparent);
+    border: 1px solid color-mix(in oklab, var(--_accent) 45%, var(--_border));
+    border-radius: 10px;
+    padding: 4px 8px;
+    pointer-events: none;
+}
+
+/* Inputs & Select */
+.trdil-scope .row input[type="text"],
+.trdil-scope .row input[type="number"],
+.trdil-scope .row select,
+.trdil-scope .row input[type="color"] {
+    width: 100%;
+    background: var(--_panel-2);
+    color: var(--_text);
+    border: 1px solid var(--_border);
+    border-radius: 10px;
+    padding: 12px 12px;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+}
+.trdil-scope .row select option {
+    background: var(--_panel);
+    color: var(--_text);
+}
+.trdil-scope .row input[type="text"]:focus-visible,
+.trdil-scope .row input[type="number"]:focus-visible,
+.trdil-scope .row select:focus-visible,
+.trdil-scope .row input[type="color"]:focus-visible {
+    outline: 0;
+    border-color: var(--_accent);
+    box-shadow: 0 0 0 3px var(--_ring);
+}
+
+/* Range slider */
+.trdil-scope .row input[type="range"] {
+    width: 100%;
+    height: 10px;
+    background: transparent;
+    accent-color: var(--_accent);
+    touch-action: pan-y;
+}
+.trdil-scope .row input[type="range"]::-webkit-slider-runnable-track {
+    height: 10px;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--_accent) 28%, var(--_border));
+}
+.trdil-scope .row input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--_accent);
+    border: 2px solid #fff;
+    margin-top: -4px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+.trdil-scope .row input[type="range"]::-moz-range-track {
+    height: 10px;
+    border-radius: 999px;
+    background: color-mix(in oklab, var(--_accent) 28%, var(--_border));
+}
+.trdil-scope .row input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--_accent);
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+}
+
+/* Dropzone */
+.trdil-scope .drop {
+    position: relative;
+    background: transparent;
+    overflow: hidden;
+    border: 2px dashed rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    padding: 18px;
+    text-align: center;
+    transition: border-color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, transform 0.08s ease;
+    margin-bottom: 16px;
+}
+.trdil-scope .drop.hover {
+    border-color: var(--_accent);
+    background: color-mix(in oklab, var(--_accent) 12%, transparent);
+    box-shadow: 0 8px 26px color-mix(in oklab, var(--_accent) 22%, transparent);
+    transform: translateY(-1px);
+}
+.trdil-scope .drop input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+/* Tombol */
+.trdil-scope .primary {
+    appearance: none;
+    background: linear-gradient(135deg, var(--_accent), var(--_accent2));
+    color: #fff;
+    border: none;
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-weight: 800;
+    letter-spacing: 0.2px;
+    cursor: pointer;
+    margin-top: 12px;
+    width: 100%;
+    box-shadow: 0 12px 30px color-mix(in oklab, var(--_accent) 35%, transparent);
+    transition: transform 0.08s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+.trdil-scope .primary:hover {
+    filter: brightness(1.05);
+    box-shadow: 0 14px 36px color-mix(in oklab, var(--_accent) 44%, transparent);
+}
+.trdil-scope .primary:active {
+    transform: translateY(1px);
+}
+@media (max-width: 560px) {
+    .trdil-scope .panel .primary {
+        width: 100%;
+        position: sticky;
+        bottom: 0;
+        margin-top: var(--_sp-3);
+    }
+}
+
+/* Preview */
+.trdil-scope .cell {
+    border: none !important;
+    background: transparent;
+    display: grid;
+    place-items: center;
+    padding: 10px;
+}
+.trdil-scope .cell canvas.pv {
+    height: auto !important;
+    aspect-ratio: 1 / 1;
+    image-rendering: auto;
+    max-inline-size: 100%;
+}
+
+/* Bucket A (1:1) */
+.trdil-scope .cell canvas.pv.w48 {
+    width: 48px !important;
+}
+.trdil-scope .cell canvas.pv.w72 {
+    width: 72px !important;
+}
+.trdil-scope .cell canvas.pv.w96 {
+    width: 96px !important;
+}
+.trdil-scope .cell canvas.pv.w144 {
+    width: 144px !important;
+}
+.trdil-scope .cell canvas.pv.w192 {
+    width: 192px !important;
+}
+.trdil-scope .cell canvas.pv.w256 {
+    width: 256px !important;
+}
+
+/* Bucket B (besar seragam) */
+.trdil-scope .cell canvas.pv.wL {
+    width: var(--pvL) !important;
+}
+
+/* grid responsif pratinjau */
+.trdil-scope .preview-grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ==== Manual Position UI (pad + number) ==== */
+.trdil-scope .pos-xy {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 12px;
+    align-items: start;
+}
+.trdil-scope .pos-xy-ctrl {
+    border: 1px solid var(--_border);
+    border-radius: 12px;
+    overflow: hidden;
+    background: color-mix(in oklab, var(--_panel) 88%, transparent);
+}
+.trdil-scope #posPad {
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+.trdil-scope .pos-xy-sliders {
+    display: grid;
+    gap: 8px;
+}
+
+/* Fokus global */
+:where(
+        .trdil-scope button,
+        .trdil-scope input,
+        .trdil-scope select,
+        .trdil-scope details,
+        .trdil-scope summary,
+        .trdil-scope .drop,
+        .trdil-scope .cell
+    ):focus-visible {
+    outline: 0;
+    box-shadow: 0 0 0 3px var(--_ring);
+    border-color: var(--_accent);
+}
+
+/* Motion */
+@media (prefers-reduced-motion: reduce) {
+    .trdil-scope .panel,
+    .trdil-scope .drop,
+    .trdil-scope .cell,
+    .trdil-scope .primary {
+        transition: none;
+    }
+}
+
+/* ================================
+   LIGHT MODE OVERRIDES (non-intrusive)
+   ================================ */
+
+:root.light .trdil-scope {
+    color-scheme: light;
+    --_panel: var(--panel, #ffffff);
+    --_panel-2: color-mix(in oklab, var(--_panel) 96%, #f8fafc);
+    --_text: var(--text, #0f172a);
+    --_muted: var(--muted, #6b7280);
+    --_accent: var(--brand, #7c3aed);
+    --_accent2: var(--brand-strong, #8b5cf6);
+    --_border: var(--border, rgba(2, 6, 23, 0.12));
+    --_shadow: var(--shadow, 0 8px 24px rgba(2, 6, 23, 0.08));
+    --_ring: color-mix(in oklab, var(--_accent) 38%, transparent);
+}
+
+:root.light .trdil-scope .panel {
+    background: linear-gradient(180deg, color-mix(in oklab, var(--_panel) 98%, transparent) 0%, var(--_panel-2) 100%);
+    border-color: var(--_border);
+    box-shadow: var(--_shadow);
+}
+:root.light .trdil-scope .panel:hover {
+    border-color: color-mix(in oklab, var(--_accent) 28%, var(--_border));
+    box-shadow: 0 10px 28px rgba(2, 6, 23, 0.12);
+}
+
+:root.light .trdil-scope details {
+    background: linear-gradient(180deg, rgba(2, 6, 23, 0.03), rgba(2, 6, 23, 0.015));
+    border-color: var(--_border);
+}
+:root.light .trdil-scope details[open] {
+    box-shadow: inset 0 0 0 1px color-mix(in oklab, var(--_accent) 12%, transparent);
+}
+
+:root.light .trdil-scope .val {
+    color: var(--_text);
+    background: color-mix(in oklab, var(--_accent) 18%, #ffffff);
+    border-color: color-mix(in oklab, var(--_accent) 28%, var(--_border));
+}
+
+:root.light .trdil-scope .row input[type="text"],
+:root.light .trdil-scope .row input[type="number"],
+:root.light .trdil-scope .row select,
+:root.light .trdil-scope .row input[type="color"] {
+    background: var(--_panel);
+    color: var(--_text);
+    border-color: var(--_border);
+}
+
+:root.light .trdil-scope .row input[type="range"]::-webkit-slider-runnable-track {
+    background: color-mix(in oklab, var(--_accent) 20%, #e5e7eb);
+}
+:root.light .trdil-scope .row input[type="range"]::-moz-range-track {
+    background: color-mix(in oklab, var(--_accent) 20%, #e5e7eb);
+}
+
+:root.light .trdil-scope .drop {
+    border-color: color-mix(in oklab, #0f172a 12%, transparent);
+    background: #ffffff;
+}
+:root.light .trdil-scope .drop.hover {
+    border-color: var(--_accent);
+    background: color-mix(in oklab, var(--_accent) 10%, #ffffff);
+    box-shadow: 0 8px 24px rgba(2, 6, 23, 0.12);
+}
+
+:root.light .trdil-scope .pos-xy-ctrl {
+    background: color-mix(in oklab, #ffffff 92%, #f8fafc);
+    border-color: var(--_border);
+}
+
+:root.light .trdil-scope .primary {
+    box-shadow: 0 10px 24px color-mix(in oklab, var(--_accent) 24%, transparent);
+}
+:root.light .trdil-scope .primary:hover {
+    box-shadow: 0 12px 28px color-mix(in oklab, var(--_accent) 32%, transparent);
+}
+
+:root.light .trdil-scope .cell {
+    background: transparent;
+}
+
+@media (prefers-contrast: more) {
+    :root.light .trdil-scope :is(button, input, select, details, summary, .drop, .cell):focus-visible {
+        box-shadow: 0 0 0 4px color-mix(in oklab, var(--_accent) 50%, transparent);
+    }
+}

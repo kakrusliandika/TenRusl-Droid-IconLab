@@ -1,0 +1,5 @@
+Contact: mailto:contact@tenrusl.com
+Policy: https://tenrusl-diffview.pages.dev/security
+Acknowledgments: https://tenrusl-diffview.pages.dev/security#hall-of-fame
+Preferred-Languages: en, id
+Canonical: https://tenrusl-diffview.pages.dev/.well-known/security.txt
