@@ -8,7 +8,7 @@
     const $$ = (s, c = document) => Array.from(c.querySelectorAll(s));
 
     /* ---------- THEME helpers ---------- */
-    const THEME_LS = "trhc.theme";
+    const THEME_LS = "tenrusl.theme";
 
     function ensureMetaTheme() {
         let m = document.querySelector('meta[name="theme-color"]');
@@ -61,10 +61,10 @@
         hdr.setAttribute("data-scope", "pages");
         hdr.innerHTML = `
       <div class="brand">
-        <img src="/assets/images/icon.svg" width="28" height="28" alt="TRHC" />
+        <img src="/assets/images/icon.svg" width="28" height="28" alt="TRDIL" />
         <strong>
-          <span class="brand-full">TenRusl DiffView</span>
-          <span class="brand-abbr">TRHC</span>
+          <span class="brand-full">TenRusl Droid IconLab</span>
+          <span class="brand-abbr">TRDIL</span>
         </strong>
         <span class="badge">PWA</span>
       </div>
@@ -157,8 +157,8 @@
         }
     }
 
-    // i18n broadcast khusus pages: konsisten ke `trhc:langchange`
-    document.addEventListener("trhc:langchange", () => {
+    // i18n broadcast khusus pages: konsisten ke `tenrusl:langchange`
+    document.addEventListener("tenrusl:langchange", () => {
         const hdr = document.querySelector('.app-header[data-scope="pages"]');
         if (!hdr) return;
         applyI18N(hdr);

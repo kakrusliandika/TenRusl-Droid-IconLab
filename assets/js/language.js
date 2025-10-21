@@ -1,12 +1,12 @@
 // C:\laragon\www\TenRusl-Droid-IconLab\assets\js\language.js
 // ESM — i18n TRDIL (EN/ID) — SELARAS DENGAN header.js (TRDV)
 // - Global window.TRI18N { t, getLang, setLang, toggleUiLang }
-// - Persist ke 2 key LS: "trdil:lang" & "trhc.uiLang"
+// - Persist ke 2 key LS: "trdil:lang" & "tenrusl.uiLang"
 // - Set <html lang="..">, merge fallback, auto-translate DOM
-// - Dispatch & tangkap event "trhc:i18nUpdated" agar header badge sinkron
+// - Dispatch & tangkap event "tenrusl:i18nUpdated" agar header badge sinkron
 
 const LS_KEY_TRDIL = "trdil:lang";
-const LS_KEY_HDR = "trhc.uiLang";
+const LS_KEY_HDR = "tenrusl.uiLang";
 const DEFAULT_LANG = "en";
 const SUPPORTED = new Set(["en", "id"]);
 const I18N_BASE = "assets/i18n";
@@ -149,7 +149,7 @@ async function setLang(lang) {
     translateDocument();
 
     // beritahu header.js & lainnya
-    document.dispatchEvent(new CustomEvent("trhc:i18nUpdated", { detail: { lang } }));
+    document.dispatchEvent(new CustomEvent("tenrusl:i18nUpdated", { detail: { lang } }));
 }
 
 function getLang() {
@@ -199,7 +199,7 @@ function boot() {
     setLang(currentLang); // load JSON & broadcast event
 
     // Dengarkan event dari header fallback
-    document.addEventListener("trhc:i18nUpdated", (e) => {
+    document.addEventListener("tenrusl:i18nUpdated", (e) => {
         const next = (e?.detail?.lang || "").toLowerCase();
         if (SUPPORTED.has(next) && next !== currentLang) {
             // Hindari loop: hanya set jika beda

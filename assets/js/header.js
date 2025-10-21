@@ -74,7 +74,7 @@
 
     function getCurrentUiLang() {
         try {
-            const fromHdr = localStorage.getItem("trhc.uiLang");
+            const fromHdr = localStorage.getItem("tenrusl.uiLang");
             if (fromHdr) return String(fromHdr).toLowerCase();
             const fromTrdil = localStorage.getItem("trdil:lang");
             if (fromTrdil) return String(fromTrdil).toLowerCase();
@@ -114,12 +114,12 @@
                     try {
                         const cur = getCurrentUiLang();
                         const next = cur === "en" ? "id" : "en";
-                        localStorage.setItem("trhc.uiLang", next);
+                        localStorage.setItem("tenrusl.uiLang", next);
                         localStorage.setItem("trdil:lang", next);
                     } catch {}
                     setUiBadge(header);
                     document.dispatchEvent(
-                        new CustomEvent("trhc:i18nUpdated", { detail: { lang: getCurrentUiLang() } })
+                        new CustomEvent("tenrusl:i18nUpdated", { detail: { lang: getCurrentUiLang() } })
                     );
                 }
             });
@@ -135,7 +135,7 @@
         }
     }
 
-    document.addEventListener("trhc:i18nUpdated", () => {
+    document.addEventListener("tenrusl:i18nUpdated", () => {
         const h = $(".app-header");
         if (h) {
             setUiBadge(h);

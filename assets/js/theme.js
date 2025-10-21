@@ -1,6 +1,6 @@
 /* theme.js — Dark/Light theme tanpa Prism */
 (function () {
-    const LS_KEY = "trhc.theme";
+    const LS_KEY = "tenrusl.theme";
     const root = document.documentElement;
 
     function setTheme(mode) {

@@ -1,9 +1,9 @@
 /* =========================================================
-   TRHC language-pages.js — FINAL (no logs)
+   tenrusl language-pages.js — FINAL (no logs)
    - Fallback inline → hindari token mentah saat first paint
    - Muat /assets/i18n/pages.json (coba ../ lalu /), merge ke fallback
    - Autodetect pertama: LS → country hint → navigator → timezone
-   - Persist 'trhc.uiLang' agar konsisten dgn Home
+   - Persist 'tenrusl.uiLang' agar konsisten dgn Home
    - Terjemah: [data-i18n], [data-i18n-attrs], <title>, & token di nav/crumbs
    - MutationObserver untuk header/footer yang diinject
    - API: window.PagesI18N { t,get,set,toggleLang,refresh }
@@ -11,7 +11,7 @@
 (function () {
     "use strict";
 
-    var I18N_LS = "trhc.uiLang";
+    var I18N_LS = "tenrusl.uiLang";
     var SUPPORTED = ["en", "id"];
 
     // Fallback minimal agar UI langsung terisi sebelum pages.json termuat
@@ -274,7 +274,7 @@
             translateTree(document);
         });
 
-        document.dispatchEvent(new CustomEvent("trhc:i18nUpdated", { detail: { lang: lang } }));
+        document.dispatchEvent(new CustomEvent("tenrusl:i18nUpdated", { detail: { lang: lang } }));
     }
 
     function bindToggle() {
@@ -289,8 +289,8 @@
         var fromLS = localStorage.getItem(I18N_LS);
         if (fromLS) return clamp(fromLS);
 
-        var meta = document.querySelector('meta[name="trhc-country"]');
-        var hinted = ((window.__TRHC_COUNTRY || (meta && meta.getAttribute("content")) || "") + "").toUpperCase();
+        var meta = document.querySelector('meta[name="tenrusl-country"]');
+        var hinted = ((window.__tenrusl_COUNTRY || (meta && meta.getAttribute("content")) || "") + "").toUpperCase();
         if (hinted === "ID") return "id";
 
         var navs = navigator.languages || [navigator.language || "en"];
