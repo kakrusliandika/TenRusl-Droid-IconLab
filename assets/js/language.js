@@ -1,11 +1,11 @@
 // C:\laragon\www\TenRusl-Droid-IconLab\assets\js\language.js
 // ESM — i18n TRDIL (EN/ID) — SELARAS DENGAN header.js (TRDV)
 // - Global window.TRI18N { t, getLang, setLang, toggleUiLang }
-// - Persist ke 2 key LS: "trdil:lang" & "tenrusl.uiLang"
+// - Persist ke 2 key LS: "tenrusl:lang" & "tenrusl.uiLang"
 // - Set <html lang="..">, merge fallback, auto-translate DOM
 // - Dispatch & tangkap event "tenrusl:i18nUpdated" agar header badge sinkron
 
-const LS_KEY_TRDIL = "trdil:lang";
+const LS_KEY_TRDIL = "tenrusl:lang";
 const LS_KEY_HDR = "tenrusl.uiLang";
 const DEFAULT_LANG = "en";
 const SUPPORTED = new Set(["en", "id"]);

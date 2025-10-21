@@ -76,7 +76,7 @@
         try {
             const fromHdr = localStorage.getItem("tenrusl.uiLang");
             if (fromHdr) return String(fromHdr).toLowerCase();
-            const fromTrdil = localStorage.getItem("trdil:lang");
+            const fromTrdil = localStorage.getItem("tenrusl:lang");
             if (fromTrdil) return String(fromTrdil).toLowerCase();
         } catch {}
         const htmlLang = (document.documentElement.lang || "").toLowerCase();
@@ -115,7 +115,7 @@
                         const cur = getCurrentUiLang();
                         const next = cur === "en" ? "id" : "en";
                         localStorage.setItem("tenrusl.uiLang", next);
-                        localStorage.setItem("trdil:lang", next);
+                        localStorage.setItem("tenrusl:lang", next);
                     } catch {}
                     setUiBadge(header);
                     document.dispatchEvent(
